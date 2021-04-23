@@ -1,0 +1,85 @@
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versionamento Local e Repositório Remoto</title>
+</head>
+<body>
+   
+</body>
+</html>
+-->
+
+<!--
+<script>
+var nomes = ["Douglas", "Flávio", "Nico", "Rômulo", "Leonardo"];
+
+/*
+for (var i = 0; i < nomes.length; i++) {
+    console.log(nomes[i] + " é instrutor da Alura");
+}
+*/
+
+//Todo array possui a função forEach(), em JavaScript. Passamos para ela uma função por parâmetro, e nessa função fazemos o que quisermos para cada item do array. O item do array é recebido por parâmetro na função interna:
+
+nomes.forEach(function(nome) {
+    console.log(nome + " é instrutor da Alura");
+})
+</script>
+-->
+
+<!--
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Minha página com Javascript</h1>
+        <script>
+            Olá mundo!
+        </script>
+    </body>
+</html>
+
+No entanto, quando ler a tag <script>, o navegador entende que todo texto que está dentro da tag <script> deve ser lido como um Javascript, logo ele vai tentar interpretar a frase "Olá Mundo" como se fosse uma função Javascript válido. 
+O que sabemos que não é, e então ele exibirá um erro de Unexpected Identifier, que nada mais é o que ele dizendo através do console de desenvolvedor que ele não entende "Olá mundo" como uma de suas funções.
+Saber identificar e interpretar os erros do console é uma habilidade de todo bom desenvolvedor Javascript, então é bom começarmos a praticá-la desde já.
+Se desejamos que uma mensagem seja exibida no console, devemos sempre chamar a função console.log(), que é a função que recebe como parâmetro o conteúdo da mensagem que queremos exibir no console.
+-->
+
+<ul class="lista">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>
+
+<input id="campo"><button id="botao">Adiciona</button>
+
+<script>
+
+    var lis = document.querySelectorAll('li');
+
+    for(var i = 0; i < lis.length; i++) {
+
+        lis[i].addEventListener('click', function() {
+
+            alert(this.textContent);
+        });
+    }
+
+    var botao = document.querySelector('#botao');
+    var input = document.querySelector('#campo');
+    var lista = document.querySelector('.lista');
+
+    botao.addEventListener('click',function() {
+
+        var li = document.createElement('li');
+        li.textContent = input.value;
+        lista.appendChild(li);
+    });
+
+//O código funciona, insere novos elementos na lista funciona corretamente, fazendo com que um novo elemento apareça na lista.. No entanto, elementos adicionados dinamicamente não disparam o evento click, aquele que exibe o conteúdo do elemento através de um alert.
+
+</script>
